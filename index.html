@@ -4,15 +4,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <!-- ====================================================================
-       ATENÇÃO ESTUDANTES: 
-       Ajuste a tag <title> e a <meta description> para o nome do seu setor.
-       Exemplo: "Achados e Perdidos — InfoHub FAMINAS"
-       ==================================================================== -->
-  <title>Setor: [Nome do Setor] — InfoHub FAMINAS</title>
+  <!-- ==================================================================== -->
+  <title>Quadras e Espaços Esportivos — InfoHub FAMINAS</title>
   <meta name="description"
-    content="Canal de autoatendimento institucional desenvolvido pelos discentes de Análise e Desenvolvimento de Sistemas (ADS) na disciplina de Engenharia de Software da FAMINAS." />
+    content="Agende a quadra poliesportiva, o campo, a quadra de areia e a piscina da FAMINAS. Veja horários, regras e como solicitar ao setor de extensão." />
 
   <link rel="icon" type="image/png" href="./assets/images/logo-faminas.png" />
 
@@ -33,6 +28,7 @@
 
   <!-- Folha de Estilo Customizada dos Estudantes (LIVRE PARA EDIÇÃO) -->
   <link rel="stylesheet" href="./css/custom.css" />
+  <link rel="stylesheet" href="./css/custom-quadras.css" />
 </head>
 
 <body>
@@ -84,12 +80,12 @@
 
         <!-- [EDITÁVEL]: Nome do Setor -->
         <h1 id="hero-heading" class="hero-title">
-          Setor: <span>[Nome do Setor Institucional]</span>
+          Setor: <span>Quadras e Espaços Esportivos</span>
         </h1>
 
         <!-- [EDITÁVEL]: Descrição e Propósito do Setor apurados na entrevista -->
         <p class="hero-description">
-          Canal unificado de autoatendimento, mapeamento de processos oficiais, orientações normativas e canais de contato homologados junto à coordenação e gestão setorial da FAMINAS.
+          Agende a quadra poliesportiva, o campo, a quadra de areia ou a piscina da FAMINAS. O pedido é feito por e-mail institucional, exclusivamente às segundas-feiras, até às 13h30.
         </p>
 
         <div class="hero-badges-group" aria-label="Informações do autoatendimento">
@@ -119,142 +115,426 @@
          ==================================================================== -->
     <section id="features" class="sector-content-section" aria-labelledby="sector-content-heading">
       <div class="container">
-        
+
         <!-- Cabeçalho da Seção Central -->
         <div class="sector-section-header">
           <div class="sector-section-tag">
-            <span class="material-symbols-outlined" aria-hidden="true">help_center</span>
-            <span>Guia Prático e Procedimentos</span>
+            <span class="material-symbols-outlined" aria-hidden="true">sports_soccer</span>
+            <span>Agendamento de quadras e espaços</span>
           </div>
           <h2 id="sector-content-heading" class="sector-section-title">
-            Como Podemos Ajudar Você Hoje?
+            Reserve seu horário de esporte
           </h2>
           <p class="sector-section-subtitle">
-            Consulte as principais solicitações, prazos e canais de atendimento direto mapeados pela equipe discente.
+            Os pedidos são feitos por e-mail, só às segundas-feiras, até às 13h30. Veja os espaços, as regras e o que informar na solicitação.
           </p>
         </div>
 
-        <!-- EXEMPLO DE BLOCO 1: Grid de Tópicos / Serviços Frequentes -->
-        <div class="sector-grid">
-          <article class="sector-card">
-            <div class="sector-card-icon" aria-hidden="true">
-              <span class="material-symbols-outlined">assignment</span>
-            </div>
-            <h3 class="sector-card-title">Orientações e Normas</h3>
-            <p class="sector-card-text">
-              Consulte a regulamentação oficial, formulários obrigatórios e o passo a passo para abertura formal de chamados.
-            </p>
-            <a href="#fluxo" class="btn btn-outline-light" style="color: var(--color-primary-navy) !important; border-color: var(--color-border);">
-              Ver Passo a Passo
-            </a>
-          </article>
-
-          <article class="sector-card">
-            <div class="sector-card-icon" aria-hidden="true">
-              <span class="material-symbols-outlined">event_available</span>
-            </div>
-            <h3 class="sector-card-title">Prazos e Calendário</h3>
-            <p class="sector-card-text">
-              Fique atento às datas-limite para envio de requerimentos, renovações e homologação de documentos institucionais.
-            </p>
-            <a href="#prazos" class="btn btn-outline-light" style="color: var(--color-primary-navy) !important; border-color: var(--color-border);">
-              Consultar Datas
-            </a>
-          </article>
-
-          <article class="sector-card">
-            <div class="sector-card-icon" aria-hidden="true">
-              <span class="material-symbols-outlined">contact_phone</span>
-            </div>
-            <h3 class="sector-card-title">Canais de Atendimento</h3>
-            <p class="sector-card-text">
-              Localização física no campus, horários de funcionamento presencial, telefone, e-mail institucional e WhatsApp oficial.
-            </p>
-            <a href="#contato" class="btn btn-outline-light" style="color: var(--color-primary-navy) !important; border-color: var(--color-border);">
-              Ver Contatos
-            </a>
-          </article>
+        <!-- BLOCO 1: Placar de horários -->
+        <div class="scoreboard" role="group" aria-label="Prazo e forma de agendamento">
+          <div class="scoreboard-cell">
+            <span class="scoreboard-label">Pedidos de agendamento</span>
+            <strong class="scoreboard-value">Só às segundas</strong>
+          </div>
+          <div class="scoreboard-cell">
+            <span class="scoreboard-label">Prazo</span>
+            <strong class="scoreboard-value">Até 13h30</strong>
+          </div>
+          <div class="scoreboard-cell is-highlight">
+            <span class="scoreboard-label">Como enviar</span>
+            <strong class="scoreboard-value">E-mail institucional</strong>
+          </div>
         </div>
 
-        <!-- EXEMPLO DE BLOCO 2: Fluxo Passo a Passo -->
-        <div id="fluxo" style="margin-top: 3rem; background: var(--color-bg-card); padding: 2rem; border-radius: var(--radius-lg); border: 1px solid var(--color-border);">
-          <h3 style="font-size: 1.35rem; color: var(--color-primary-navy); margin-bottom: 0.5rem;">
-            Passo a Passo do Processo Setorial
-          </h3>
-          <p style="color: var(--color-text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">
-            Siga as etapas abaixo para protocolar ou resolver sua demanda com rapidez:
+        <!-- BLOCO: Mapa interativo do complexo esportivo -->
+        <div id="mapa" class="q-block" data-mapa>
+          <h3 class="q-block-title">Conheça o complexo esportivo</h3>
+          <p class="q-block-lead">
+            Veja o complexo de cima e clique em uma área para descobrir o que é e como usar.
+          </p>
+
+          <div class="map-stage">
+            <img class="map-photo" src="./assets/images/complexo-aereo.jpg" width="1672" height="941"
+              alt="Vista aérea do complexo esportivo: a piscina no canto superior esquerdo, a pista com duas quadras de areia ao centro, a quadra poliesportiva embaixo à esquerda e o campo de futebol à direita." />
+
+            <!-- Áreas clicáveis (transparentes) sobre o desenho -->
+            <button type="button" class="map-zone" data-zone="campo" data-spot="campo" aria-pressed="false" aria-controls="mapa-info">
+              <span class="map-zone-name">Campo</span>
+            </button>
+            <button type="button" class="map-zone" data-zone="quadra" data-spot="quadra" aria-pressed="false" aria-controls="mapa-info">
+              <span class="map-zone-name">Quadra poliesportiva</span>
+            </button>
+            <button type="button" class="map-zone" data-zone="areia" data-spot="areia" aria-pressed="false" aria-controls="mapa-info">
+              <span class="map-zone-name">Quadra de areia</span>
+            </button>
+            <button type="button" class="map-zone" data-zone="piscina" data-spot="piscina" aria-pressed="false" aria-controls="mapa-info">
+              <span class="map-zone-name">Piscina</span>
+            </button>
+          </div>
+
+          <p class="map-disclaimer">
+            Vista aérea do complexo esportivo.
+          </p>
+
+          <!-- Explicação da área escolhida. Sem JavaScript, todas as explicações ficam visíveis. -->
+          <div id="mapa-info" class="map-info" aria-live="polite">
+            <div class="map-info-intro" data-zone-intro hidden>
+              <span class="material-symbols-outlined" aria-hidden="true">touch_app</span>
+              <p>Clique em uma área do mapa para ver o que ela é e como usar.</p>
+            </div>
+
+            <article class="map-info-card tone-campo" data-zone-info="campo">
+              <h4>Campo</h4>
+              <p>Área aberta para futebol e outras atividades de campo.</p>
+              <ul class="map-facts">
+                <li><span class="material-symbols-outlined" aria-hidden="true">sports_soccer</span> Aceita as modalidades que cabem no campo.</li>
+                <li><span class="material-symbols-outlined" aria-hidden="true">sports_basketball</span> Equipamentos: pode usar os da faculdade.</li>
+                <li><span class="material-symbols-outlined" aria-hidden="true">supervisor_account</span> Professor supervisor: não é necessário.</li>
+                </ul>
+              <a class="map-info-link" href="#como-agendar">Ver como agendar</a>
+            </article>
+
+            <article class="map-info-card tone-quadra" data-zone-info="quadra">
+              <h4>Quadra poliesportiva</h4>
+              <p>Quadra para várias modalidades, como futsal, vôlei, basquete e handebol.</p>
+              <ul class="map-facts">
+                <li><span class="material-symbols-outlined" aria-hidden="true">sports_handball</span> Aceita as modalidades que cabem na quadra.</li>
+                <li><span class="material-symbols-outlined" aria-hidden="true">sports_basketball</span> Equipamentos: pode usar os da faculdade.</li>
+                <li><span class="material-symbols-outlined" aria-hidden="true">supervisor_account</span> Professor supervisor: não é necessário.</li>
+                </ul>
+              <a class="map-info-link" href="#como-agendar">Ver como agendar</a>
+            </article>
+
+            <article class="map-info-card tone-areia" data-zone-info="areia">
+              <h4>Quadra de areia</h4>
+              <p>Quadra de piso de areia para modalidades como vôlei de praia, futevôlei e beach tennis.</p>
+              <ul class="map-facts">
+                <li><span class="material-symbols-outlined" aria-hidden="true">sports_volleyball</span> Aceita as modalidades que cabem na areia.</li>
+                <li><span class="material-symbols-outlined" aria-hidden="true">sports_basketball</span> Equipamentos: pode usar os da faculdade.</li>
+                <li><span class="material-symbols-outlined" aria-hidden="true">supervisor_account</span> Professor supervisor: não é necessário.</li>
+                </ul>
+              <a class="map-info-link" href="#como-agendar">Ver como agendar</a>
+            </article>
+
+            <article class="map-info-card tone-piscina" data-zone-info="piscina">
+              <h4>Piscina</h4>
+              <p>Espaço para natação e atividades aquáticas.</p>
+              <ul class="map-facts">
+                <li><span class="material-symbols-outlined" aria-hidden="true">pool</span> Salva-vidas: obrigatório durante toda a atividade.</li>
+                <li><span class="material-symbols-outlined" aria-hidden="true">sports_basketball</span> Equipamentos: pode usar os da faculdade.</li>
+                <li><span class="material-symbols-outlined" aria-hidden="true">supervisor_account</span> Professor supervisor: não é necessário.</li>
+                </ul>
+              <a class="map-info-link" href="#como-agendar">Ver como agendar</a>
+            </article>
+          </div>
+        </div>
+
+        <!-- BLOCO 2: Espaços disponíveis -->
+        <div id="espacos" class="q-block">
+          <h3 class="q-block-title">Espaços disponíveis</h3>
+          <p class="q-block-lead">
+            Todas as modalidades que cabem no espaço escolhido podem ser agendadas.
+          </p>
+
+          <div class="space-grid">
+            <article class="space-card tone-quadra">
+              <figure class="space-photo">
+                <img src="assets/images/Foto Quadra Poliesportiva.webp">
+              </figure>
+              <div class="space-body">
+                <h4>Quadra poliesportiva</h4>
+                <p>Futsal, vôlei, basquete, handebol e outras modalidades de quadra.</p>
+              </div>
+            </article>
+
+            <article class="space-card tone-campo">
+              <figure class="space-photo">
+                <img src="assets/images/Foto Quarta Quadra.webp" alt="" srcset="">
+              </figure>
+              <div class="space-body">
+                <h4>Campo</h4>
+                <p>Futebol e outras atividades de campo aberto.</p>
+              </div>
+            </article>
+
+            <article class="space-card tone-areia">
+              <figure class="space-photo">
+                <img src="assets/images/Quadra de Areia.png" alt="" srcset="">
+              </figure>
+              <div class="space-body">
+                <h4>Quadra de areia</h4>
+                <p>Vôlei de praia, futevôlei, beach tennis e outras modalidades de areia.</p>
+              </div>
+            </article>
+
+            <article class="space-card tone-piscina">
+              <figure class="space-photo">
+                <img src="assets/images/Foto Piscina.webp" alt="" srcset="">
+              </figure>
+              <div class="space-body">
+                <h4>Piscina</h4>
+                <p>Natação e atividades aquáticas.</p>
+                <p class="space-flag">
+                  <span class="material-symbols-outlined" aria-hidden="true">pool</span>
+                  <span>Salva-vidas obrigatório durante toda a atividade.</span>
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+       
+        <!-- BLOCO 3: Passo a passo -->
+        <div id="como-agendar" class="q-block q-panel">
+          <h3 class="q-block-title">Como agendar</h3>
+          <p class="q-block-lead">
+            Quatro etapas, do pedido até a resposta:
           </p>
 
           <ol class="process-steps-list">
             <li class="process-step-item">
               <span class="step-number">1</span>
               <div class="step-content">
-                <strong>Reunir a Documentação Necessária</strong>
-                <p>Verifique com antecedência os comprovantes exigidos e tenha em mãos seu número de matrícula institucional.</p>
+                <strong>Reúna os dados do treino</strong>
+                <p>Nome completo e matrícula de todos que vão participar. Se houver equipe técnica ou auxiliares, nome completo e telefone de cada um.</p>
               </div>
             </li>
             <li class="process-step-item">
               <span class="step-number">2</span>
               <div class="step-content">
-                <strong>Protocolar o Requerimento</strong>
-                <p>Abra o requerimento pelo portal acadêmico ou compareça presencialmente ao setor nos horários indicados.</p>
+                <strong>Envie o e-mail institucional</strong>
+                <p>Exclusivamente às segundas-feiras, até às 13h30. Depois desse horário, não são feitas reservas. O contato está no fim desta página.</p>
               </div>
             </li>
             <li class="process-step-item">
               <span class="step-number">3</span>
               <div class="step-content">
-                <strong>Acompanhar o Parecer e Retirada</strong>
-                <p>Acompanhe o status do chamado e receba a confirmação ou retirada do documento protocolado.</p>
+                <strong>Informe o pedido</strong>
+                <p>Espaço, modalidade e data pretendida. Lembre que, na piscina, o salva-vidas é obrigatório durante toda a atividade. Atléticas enviam também a documentação de vínculo.</p>
+              </div>
+            </li>
+            <li class="process-step-item">
+              <span class="step-number">4</span>
+              <div class="step-content">
+                <strong>Aguarde o retorno</strong>
+                <p>Os horários podem mudar e podem não estar disponíveis na hora da resposta, pois também são oferecidos a outros interessados. Peça com antecedência.</p>
               </div>
             </li>
           </ol>
         </div>
 
-        <!-- EXEMPLO DE BLOCO 3: Perguntas Frequentes (FAQ) -->
-        <div style="margin-top: 3rem;">
-          <h3 style="font-size: 1.35rem; color: var(--color-primary-navy); margin-bottom: 1rem;">
-            Dúvidas Frequentes do Setor
-          </h3>
+        <!-- BLOCO 4: O que informar na solicitação -->
+        <div id="solicitacao" class="q-block">
+          <h3 class="q-block-title">O que informar na solicitação</h3>
+          <p class="q-block-lead">
+            Estes são os dados que o setor de extensão pede no momento do pedido.
+          </p>
+
+          <dl class="req-list">
+            <div class="req-item">
+              <span class="material-symbols-outlined" aria-hidden="true">sports_handball</span>
+              <div>
+                <dt>Modalidade esportiva</dt>
+                <dd>Qualquer modalidade que caiba na quadra poliesportiva, no campo, na areia ou na piscina.</dd>
+              </div>
+            </div>
+            <div class="req-item">
+              <span class="material-symbols-outlined" aria-hidden="true">event</span>
+              <div>
+                <dt>Data pretendida</dt>
+                <dd>O dia e o horário do treino que você quer reservar, você saberá quais dias estão disponíveis ao fazer a solicitação.</dd>
+              </div>
+            </div>
+            <div class="req-item">
+              <span class="material-symbols-outlined" aria-hidden="true">groups</span>
+              <div>
+                <dt>Participantes</dt>
+                <dd>Nome completo e matrícula de todos os presentes em cada treino.</dd>
+              </div>
+            </div>
+            <div class="req-item">
+              <span class="material-symbols-outlined" aria-hidden="true">engineering</span>
+              <div>
+                <dt>Equipe técnica e auxiliares</dt>
+                <dd>Quando houver, informe nome completo e telefone de cada um para a liberação.</dd>
+              </div>
+            </div>
+            <div class="req-item">
+              <span class="material-symbols-outlined" aria-hidden="true">emoji_events</span>
+              <div>
+                <dt>Atléticas</dt>
+                <dd>É necessário o registro da atlética e o envio de documentação para vincular os treinos às atividades oficiais da atlética do curso.</dd>
+              </div>
+            </div>
+            <div class="req-item">
+              <span class="material-symbols-outlined" aria-hidden="true">pool</span>
+              <div>
+                <dt>Piscina</dt>
+                <dd>A presença de salva-vidas é obrigatória durante toda a atividade, é necessário informar levar um encarregado em ser o salva-vidas</dd>
+              </div>
+            </div>
+            <div class="req-item">
+              <span class="material-symbols-outlined" aria-hidden="true">sports_basketball</span>
+              <div>
+                <dt>Equipamentos</dt>
+                <dd>Não é preciso levar. Você pode usar os equipamentos da faculdade.</dd>
+              </div>
+            </div>
+            <div class="req-item">
+              <span class="material-symbols-outlined" aria-hidden="true">supervisor_account</span>
+              <div>
+                <dt>Professor supervisor</dt>
+                <dd>Não é necessário.</dd>
+              </div>
+            </div>
+          </dl>
+
+          <aside class="q-callout" aria-label="Aviso sobre disponibilidade">
+            <span class="material-symbols-outlined" aria-hidden="true">schedule</span>
+            <p>
+              <strong>Disponibilidade:</strong> os horários estão sujeitos a alteração e podem não estar disponíveis na hora da resposta, porque também são oferecidos a outros interessados. Peça com antecedência.
+            </p>
+          </aside>
+
+          <aside class="q-callout" aria-label="Aviso sobre o acesso ao complexo">
+            <span class="material-symbols-outlined" aria-hidden="true">badge</span>
+            <p>
+              <strong>Acesso ao complexo:</strong> pessoas externas que não foram informadas previamente não terão acesso.
+            </p>
+          </aside>
+        </div>
+
+        <!-- BLOCO 5: Perguntas frequentes -->
+        <div id="faq" class="q-block">
+          <h3 class="q-block-title">Dúvidas frequentes</h3>
           <div class="faq-accordion">
             <details class="faq-item">
               <summary class="faq-summary">
-                <span>Qual é o prazo médio de resposta para solicitações deste setor?</span>
+                <span>Quando e como faço o pedido de agendamento?</span>
                 <span class="material-symbols-outlined" aria-hidden="true">expand_more</span>
               </summary>
               <div class="faq-content">
-                O prazo de análise institucional varia entre 2 a 5 dias úteis, dependendo da complexidade do requerimento e do calendário acadêmico vigente.
+                O pedido é feito por e-mail institucional, exclusivamente às segundas-feiras, até às 13h30. Depois desse horário, não são feitas reservas.
               </div>
             </details>
             <details class="faq-item">
               <summary class="faq-summary">
-                <span>O atendimento presencial exige agendamento prévio?</span>
+                <span>Posso pedir o agendamento em outro dia da semana?</span>
                 <span class="material-symbols-outlined" aria-hidden="true">expand_more</span>
               </summary>
               <div class="faq-content">
-                Para a maioria dos serviços o atendimento é por ordem de chegada na recepção do setor. Em períodos de pico de matrícula ou eventos especiais, recomenda-se verificar aviso oficial.
+                Não. Os agendamentos acontecem só às segundas-feiras, até às 13h30, por causa da organização interna dos setores responsáveis, incluindo os mantenedores do complexo.
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary class="faq-summary">
+                <span>O horário que eu pedi está garantido?</span>
+                <span class="material-symbols-outlined" aria-hidden="true">expand_more</span>
+              </summary>
+              <div class="faq-content">
+                Não necessariamente. Os horários estão sujeitos a alteração e podem não estar disponíveis quando a resposta chegar, porque também são oferecidos a outros interessados. Por isso, peça com antecedência.
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary class="faq-summary">
+                <span>O que preciso informar sobre as pessoas que vão ao treino?</span>
+                <span class="material-symbols-outlined" aria-hidden="true">expand_more</span>
+              </summary>
+              <div class="faq-content">
+                O nome completo e a matrícula de todos os presentes em cada treino. Para equipe técnica ou auxiliares, o nome completo e o telefone.
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary class="faq-summary">
+                <span>Minha atlética pode usar o complexo?</span>
+                <span class="material-symbols-outlined" aria-hidden="true">expand_more</span>
+              </summary>
+              <div class="faq-content">
+                Sim, com o registro da atlética e o envio de documentação para vincular os treinos às atividades oficiais da atlética do curso.
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary class="faq-summary">
+                <span>Preciso levar bola, rede ou outros equipamentos?</span>
+                <span class="material-symbols-outlined" aria-hidden="true">expand_more</span>
+              </summary>
+              <div class="faq-content">
+                Não. Você pode usar os equipamentos da faculdade.
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary class="faq-summary">
+                <span>Preciso de um professor supervisor?</span>
+                <span class="material-symbols-outlined" aria-hidden="true">expand_more</span>
+              </summary>
+              <div class="faq-content">
+                Não. Mas, se for usar a piscina, a presença de salva-vidas é obrigatória durante toda a atividade.
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary class="faq-summary">
+                <span>Quais modalidades posso praticar?</span>
+                <span class="material-symbols-outlined" aria-hidden="true">expand_more</span>
+              </summary>
+              <div class="faq-content">
+                Todas as que cabem nos espaços disponíveis: quadra poliesportiva, campo, areia e piscina.
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary class="faq-summary">
+                <span>Uma pessoa de fora pode entrar no complexo?</span>
+                <span class="material-symbols-outlined" aria-hidden="true">expand_more</span>
+              </summary>
+              <div class="faq-content">
+                Somente se tiver sido informada previamente. Pessoas externas que não foram informadas não terão acesso.
               </div>
             </details>
           </div>
         </div>
 
-        <!-- EXEMPLO DE BLOCO 4: Banner de Contato Oficial -->
+        <!-- BLOCO 6: Contato -->
         <div id="contato" class="contact-banner">
           <div class="contact-banner-meta">
-            <h3>Precisa de Atendimento com a Equipe do Setor?</h3>
-            <p>Atendimento presencial no campus FAMINAS • Segunda a Sexta: 08h às 21h</p>
-          </div>
-          <div class="contact-banner-actions">
-            <a href="mailto:atendimento@faminas.edu.br" class="btn btn-outline-light">
-              <span class="material-symbols-outlined" aria-hidden="true">mail</span>
-              <span>Enviar E-mail</span>
-            </a>
-            <a href="tel:+553237297000" class="btn btn-primary-highlight">
-              <span class="material-symbols-outlined" aria-hidden="true">call</span>
-              <span>Ligar para o Setor</span>
-            </a>
+            <h3>Pronto para reservar seu horário?</h3>
+            <p>Setor de extensão • Pedidos às segundas-feiras, até às 13h30</p>
+            <ul class="contact-details">
+              <li><span class="material-symbols-outlined" aria-hidden="true">mail</span> extensao.mre@faminas.edu.br</li>
+            </ul>
           </div>
         </div>
 
+        <!-- BLOCO: Autores da página -->
+      <div id="autores" class="q-block team-block">
+        <h3 class="q-block-title">Quem construiu esta página</h3>
+        <p class="q-block-lead">
+          Equipe do curso de Análise e Desenvolvimento de Sistemas (ADS), na disciplina de Engenharia de Software.
+          
+        </p>
+
+        <!-- Troque o nome e o link (href) de cada integrante.
+            Adicione ou apague itens <li> conforme o tamanho da equipe. -->
+        <ul class="team-links">
+          <li>
+              <span class="material-symbols-outlined" aria-hidden="true">person</span>
+              <span>Arthur Ramos</span>
+          </li>
+          
+          <li>
+              <span class="material-symbols-outlined" aria-hidden="true">person</span>
+              <span>Gustavo</span>
+          </li>
+          
+          <li>
+              <span class="material-symbols-outlined" aria-hidden="true">person</span>
+              <span>Ryan</span>
+          </li>
+          
+          <li>
+              <span class="material-symbols-outlined" aria-hidden="true">person</span>
+              <span>Handrey</span>
+          </li>
+
+        </ul>
       </div>
     </section>
   </main>

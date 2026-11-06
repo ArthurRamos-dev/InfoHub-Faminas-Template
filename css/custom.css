@@ -211,3 +211,1010 @@
   color: var(--color-text-muted);
   line-height: 1.6;
 }
+/*Codigo do claude*/
+/* ==========================================================================
+   Estilos do setor: Quadras e Espaços Esportivos
+   Complementa o css/custom.css. Usa os tokens institucionais (variables.css)
+   com valores de reserva, sem alterar nenhum arquivo protegido.
+   ========================================================================== */
+
+#features {
+  --q-navy: var(--color-primary-navy, #0b2a4a);
+  --q-cyan: var(--color-primary-cyan, #1fb6e8);
+  --q-card: var(--color-bg-card, #ffffff);
+  --q-border: var(--color-border, #dde3ea);
+  --q-muted: var(--color-text-muted, #5b6877);
+  --q-radius: var(--radius-lg, 16px);
+}
+
+/* ---------- Blocos ---------- */
+.q-block {
+  margin-top: 3rem;
+}
+
+.q-block-title {
+  font-size: 1.35rem;
+  color: var(--q-navy);
+  margin-bottom: 0.5rem;
+}
+
+.q-block-lead {
+  color: var(--q-muted);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  max-width: 62ch;
+}
+
+.q-panel {
+  background: var(--q-card);
+  padding: 2rem;
+  border-radius: var(--q-radius);
+  border: 1px solid var(--q-border);
+}
+
+/* ---------- Placar de horários ---------- */
+.scoreboard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3px;
+  background: var(--q-navy);
+  border: 3px solid var(--q-navy);
+  border-radius: var(--q-radius);
+  overflow: hidden;
+  margin-top: 2rem;
+}
+
+.scoreboard-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--q-navy);
+  color: #ffffff;
+}
+
+.scoreboard-label {
+  font-size: 0.85rem;
+  color: #b9cde3;
+}
+
+.scoreboard-value {
+  font-family: "Montserrat", "Roboto", sans-serif;
+  font-size: clamp(1.25rem, 2.4vw, 1.75rem);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.scoreboard-cell.is-highlight {
+  background: var(--q-cyan);
+  color: var(--q-navy);
+}
+
+.scoreboard-cell.is-highlight .scoreboard-label {
+  color: var(--q-navy);
+}
+
+/* ---------- Cartões dos espaços ---------- */
+.space-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.25rem;
+}
+
+.space-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--q-card);
+  border: 1px solid var(--q-border);
+  border-radius: var(--q-radius);
+  overflow: hidden;
+}
+
+.space-photo {
+  position: relative;
+  margin: 0;
+  aspect-ratio: 16 / 10;
+  display: grid;
+  place-items: center;
+  background: var(--tone-bg);
+  color: var(--tone-ink);
+  border-bottom: 2px dashed var(--tone-ink);
+}
+
+.space-photo svg {
+  width: 68%;
+  height: auto;
+}
+
+.placeholder-tag {
+  position: absolute;
+  left: 0.6rem;
+  bottom: 0.5rem;
+  padding: 0.15rem 0.5rem;
+  font-size: 0.75rem;
+  color: #6b5200;
+  background: #fff6d6;
+  border: 1px dashed #c9a227;
+  border-radius: 4px;
+}
+
+.space-body {
+  padding: 1.15rem 1.25rem 1.35rem;
+}
+
+.space-body h4 {
+  margin: 0 0 0.35rem;
+  font-size: 1.1rem;
+  color: var(--q-navy);
+}
+
+.space-body p {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--q-muted);
+}
+
+.space-flag {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+  margin-top: 0.85rem !important;
+  padding: 0.6rem 0.75rem;
+  font-size: 0.88rem !important;
+  color: var(--q-navy) !important;
+  background: #e1f4fb;
+  border-left: 4px solid var(--q-cyan);
+  border-radius: 6px;
+}
+
+.space-flag .material-symbols-outlined {
+  font-size: 1.25rem;
+}
+
+.tone-quadra  { --tone-bg: #e8eef7; --tone-ink: #0b2a4a; }
+.tone-campo   { --tone-bg: #e6f3e9; --tone-ink: #1f6b3a; }
+.tone-areia   { --tone-bg: #f7efdc; --tone-ink: #8a6a1f; }
+.tone-piscina { --tone-bg: #e1f4fb; --tone-ink: #0a7fa8; }
+
+/* ---------- Lista de dados da solicitação ---------- */
+.req-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin: 0;
+}
+
+.req-item {
+  display: flex;
+  gap: 0.9rem;
+  align-items: flex-start;
+  padding: 1.1rem 1.25rem;
+  background: var(--q-card);
+  border: 1px solid var(--q-border);
+  border-radius: var(--q-radius);
+}
+
+.req-item > .material-symbols-outlined {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1.4rem;
+  color: var(--q-navy);
+  background: #e1f4fb;
+  border-radius: 50%;
+}
+
+.req-item dt {
+  font-weight: 700;
+  color: var(--q-navy);
+  margin-bottom: 0.2rem;
+}
+
+.req-item dd {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--q-muted);
+}
+
+/* ---------- Aviso para equipes externas ---------- */
+.q-callout {
+  display: flex;
+  gap: 0.85rem;
+  align-items: center;
+  margin-top: 1.25rem;
+  padding: 1rem 1.25rem;
+  background: #e1f4fb;
+  border-left: 5px solid var(--q-cyan);
+  border-radius: 8px;
+  color: var(--q-navy);
+}
+
+.q-callout p {
+  margin: 0;
+}
+
+.q-callout .material-symbols-outlined {
+  font-size: 1.6rem;
+}
+
+/* ---------- Placeholders (remover antes da entrega) ---------- */
+.ph {
+  padding: 0 0.35em;
+  color: #6b5200;
+  background: #fff6d6;
+  border: 1px dashed #c9a227;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+/* ---------- Detalhes de contato no banner ---------- */
+.contact-details {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.contact-details li {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.contact-details .material-symbols-outlined {
+  font-size: 1.25rem;
+}
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 720px) {
+  .scoreboard {
+    grid-template-columns: 1fr;
+  }
+
+  .q-panel {
+    padding: 1.25rem;
+  }
+}
+
+/* ==========================================================================
+   Mapa interativo do complexo esportivo
+   ========================================================================== */
+
+.map-stage {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  margin-inline: auto;
+  aspect-ratio: 1672 / 941;
+  border: 1px solid var(--q-border);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.map-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.map-ground {
+  fill: #eef2f6;
+}
+
+/* Áreas clicáveis: transparentes, posicionadas em % sobre o desenho (1000 x 560) */
+.map-zone {
+  position: absolute;
+  appearance: none;
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  background: transparent;
+  border: 3px solid transparent;
+  border-radius: 10px;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+
+.map-zone[data-spot="campo"] { left: 43.182%; top: 55.473%; width: 42.823%; height: 37.832%; }
+.map-zone[data-spot="quadra"] { left: 11.663%; top: 37.407%; width: 26.914%; height: 53.985%; }
+.map-zone[data-spot="areia"] { left: 51.136%; top: 14.878%; width: 29.127%; height: 24.442%; }
+.map-zone[data-spot="areia-inf"] { left: 51.136%; top: 26.78%; width: 29.127%; height: 12.54%; }
+.map-zone[data-spot="piscina"] { left: 20.036%; top: 7.226%; width: 14.773%; height: 24.655%; }
+
+.map-zone:hover {
+  background: rgba(31, 182, 232, 0.18);
+  border-color: var(--q-cyan);
+}
+
+.map-zone:focus-visible {
+  outline: 3px solid var(--q-navy);
+  outline-offset: 2px;
+  background: rgba(31, 182, 232, 0.18);
+}
+
+.map-zone.is-active {
+  background: rgba(31, 182, 232, 0.28);
+  border-color: var(--q-navy);
+}
+
+.map-zone-name {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  max-width: calc(100% - 16px);
+  padding: 0.2rem 0.6rem;
+  font-size: clamp(0.6rem, 1.5vw, 0.8rem);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--q-navy);
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 999px;
+}
+
+.map-disclaimer {
+  margin: 0.6rem auto 0;
+  max-width: 1000px;
+  font-size: 0.85rem;
+  color: var(--q-muted);
+}
+
+/* ---------- Painel de explicação ---------- */
+.map-info {
+  max-width: 1000px;
+  margin: 1.25rem auto 0;
+  min-height: 11rem;
+}
+
+.map-info-intro {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: center;
+  min-height: 11rem;
+  padding: 1.5rem;
+  color: var(--q-muted);
+  background: var(--q-card);
+  border: 2px dashed var(--q-border);
+  border-radius: var(--q-radius);
+}
+
+.map-info-intro[hidden],
+.map-info-card[hidden] {
+  display: none;
+}
+
+.map-info-intro p {
+  margin: 0;
+}
+
+.map-info-intro .material-symbols-outlined {
+  font-size: 1.75rem;
+  color: var(--q-navy);
+}
+
+.map-info-card {
+  margin-bottom: 1rem;
+  padding: 1.5rem;
+  background: var(--q-card);
+  border: 1px solid var(--q-border);
+  border-left: 8px solid var(--tone-ink);
+  border-radius: var(--q-radius);
+}
+
+.map-info-card h4 {
+  margin: 0 0 0.4rem;
+  font-size: 1.25rem;
+  color: var(--q-navy);
+}
+
+.map-info-card > p {
+  margin: 0 0 1rem;
+  max-width: 64ch;
+  color: var(--q-muted);
+}
+
+.map-facts {
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0.6rem 1.25rem;
+}
+
+.map-facts li {
+  display: flex;
+  gap: 0.55rem;
+  align-items: flex-start;
+  font-size: 0.95rem;
+  color: var(--q-navy);
+}
+
+.map-facts .material-symbols-outlined {
+  flex: none;
+  font-size: 1.3rem;
+  color: var(--tone-ink);
+}
+
+.map-info-link {
+  font-weight: 600;
+  color: var(--q-navy);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 720px) {
+  .map-zone {
+    border-width: 2px;
+  }
+
+  .map-zone-name {
+    top: 4px;
+    left: 4px;
+    max-width: calc(100% - 8px);
+    padding: 0.1rem 0.4rem;
+  }
+
+  .map-info-card {
+    padding: 1.15rem;
+  }
+}
+
+/* ==========================================================================
+   Fundo do corpo do site (área de conteúdo do setor)
+   Tom amarelado natural, como areia clara ou palha. Os cartões brancos
+   continuam em destaque sobre ele.
+   ========================================================================== */
+
+#features.sector-content-section {
+  --q-bg: #f4ecd3;
+  --q-border: #e0d5b0;
+  --q-muted: #5a5646;
+  background-color: var(--q-bg);
+}
+
+/* Elementos que usavam a borda fria padrão passam a usar a borda quente */
+#features .faq-item,
+#features .req-item,
+#features .space-card,
+#features .q-panel,
+#features .map-stage,
+#features .map-info-card {
+  border-color: var(--q-border);
+}
+
+#features .map-info-card {
+  border-left-color: var(--tone-ink);
+}
+
+/* O chão do mapa acompanha o tom do corpo, um pouco mais escuro */
+#features .map-ground {
+  fill: #ebe1c0;
+}
+
+/* Telas largas: explicação à esquerda, mapa menor à direita */
+@media (min-width: 900px) {
+  #mapa {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 520px);
+    column-gap: 1.5rem;
+    align-items: start;
+  }
+
+  #mapa .q-block-title,
+  #mapa .q-block-lead {
+    grid-column: 1 / -1;
+  }
+
+  #mapa .map-info {
+    grid-column: 1;
+    grid-row: 3 / span 2;
+    max-width: none;
+    margin: 0;
+  }
+
+  #mapa .map-stage {
+    grid-column: 2;
+    grid-row: 3;
+    max-width: 100%;
+  }
+
+  #mapa .map-disclaimer {
+    grid-column: 2;
+    grid-row: 4;
+    max-width: none;
+    margin: 0.6rem 0 0;
+  }
+
+  #mapa .map-facts {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   Animações
+   Entradas ao rolar a página dependem da classe .js-anim (adicionada pelo
+   JavaScript). Sem ela, tudo aparece normalmente.
+   ========================================================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+#features .q-block,
+#contato {
+  scroll-margin-top: 5rem;
+}
+
+/* ---------- Blocos entram subindo ---------- */
+.js-anim .q-block,
+.js-anim .contact-banner {
+  opacity: 0;
+  translate: 0 18px;
+  transition: opacity 0.6s ease, translate 0.6s ease;
+}
+
+.js-anim .q-block.is-visible,
+.js-anim .contact-banner.is-visible {
+  opacity: 1;
+  translate: 0 0;
+}
+
+/* ---------- Itens dos blocos entram em sequência ---------- */
+.js-anim :is(.space-card, .req-item, .process-step-item, .faq-item) {
+  opacity: 0;
+  translate: 0 14px;
+  transition:
+    opacity 0.5s ease,
+    translate 0.5s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+  transition-delay: calc(var(--i, 0) * 80ms), calc(var(--i, 0) * 80ms), 0s, 0s;
+}
+
+.js-anim .is-visible :is(.space-card, .req-item, .process-step-item, .faq-item) {
+  opacity: 1;
+  translate: 0 0;
+}
+
+:is(.space-card, .req-item, .process-step-item, .faq-item):nth-child(1) { --i: 0; }
+:is(.space-card, .req-item, .process-step-item, .faq-item):nth-child(2) { --i: 1; }
+:is(.space-card, .req-item, .process-step-item, .faq-item):nth-child(3) { --i: 2; }
+:is(.space-card, .req-item, .process-step-item, .faq-item):nth-child(4) { --i: 3; }
+:is(.space-card, .req-item, .process-step-item, .faq-item):nth-child(5) { --i: 4; }
+:is(.space-card, .req-item, .process-step-item, .faq-item):nth-child(6) { --i: 5; }
+
+/* Número do passo "salta" ao aparecer */
+.js-anim .step-number {
+  scale: 0.6;
+  transition: scale 0.45s cubic-bezier(0.3, 1.6, 0.5, 1);
+  transition-delay: calc(var(--i, 0) * 80ms + 0.2s);
+}
+
+.js-anim .is-visible .step-number {
+  scale: 1;
+}
+
+/* ---------- Placar: cada célula vira, uma depois da outra ---------- */
+.scoreboard {
+  perspective: 700px;
+}
+
+.js-anim .scoreboard-cell {
+  opacity: 0;
+  transform-origin: top center;
+}
+
+.js-anim .scoreboard.is-visible .scoreboard-cell {
+  animation: cell-flip 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.js-anim .scoreboard.is-visible .scoreboard-cell:nth-child(2) { animation-delay: 0.12s; }
+.js-anim .scoreboard.is-visible .scoreboard-cell:nth-child(3) { animation-delay: 0.24s; }
+
+@keyframes cell-flip {
+  from { opacity: 0; transform: rotateX(-80deg); }
+  to   { opacity: 1; transform: rotateX(0); }
+}
+
+/* ---------- Mapa: as áreas surgem uma a uma ---------- */
+.js-anim .map-art {
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.js-anim .is-visible .map-art {
+  animation: map-pop 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.js-anim .is-visible .map-art-quadra  { animation-delay: 0.15s; }
+.js-anim .is-visible .map-art-areia   { animation-delay: 0.3s; }
+.js-anim .is-visible .map-art-piscina { animation-delay: 0.45s; }
+
+@keyframes map-pop {
+  from { opacity: 0; transform: scale(0.94); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* Dica: as etiquetas piscam algumas vezes até a primeira interação */
+#mapa:not(.is-explored) .map-zone-name {
+  animation: hint-pulse 2.4s ease-in-out 4;
+}
+
+#mapa .map-zone[data-zone="quadra"] .map-zone-name  { animation-delay: 0.3s; }
+#mapa .map-zone[data-zone="areia"] .map-zone-name   { animation-delay: 0.6s; }
+#mapa .map-zone[data-zone="piscina"] .map-zone-name { animation-delay: 0.9s; }
+
+@keyframes hint-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(31, 182, 232, 0.6); }
+  60%      { box-shadow: 0 0 0 9px rgba(31, 182, 232, 0); }
+}
+
+/* Explicação da área escolhida entra deslizando da esquerda */
+.js-anim .map-info-card:not([hidden]),
+.js-anim .map-info-intro:not([hidden]) {
+  animation: info-in 0.35s ease both;
+}
+
+@keyframes info-in {
+  from { opacity: 0; translate: -14px 0; }
+  to   { opacity: 1; translate: 0 0; }
+}
+
+/* ---------- Piscina: raias com água em movimento ---------- */
+.tone-piscina .space-photo line {
+  animation: lane-flow-card 2.4s linear infinite;
+}
+
+.map-art-piscina line {
+  animation: lane-flow-map 2.4s linear infinite;
+}
+
+@keyframes lane-flow-card { to { stroke-dashoffset: -11; } }
+@keyframes lane-flow-map  { to { stroke-dashoffset: -18; } }
+
+/* ---------- Passar o mouse ---------- */
+.space-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 26px rgba(11, 42, 74, 0.14);
+}
+
+.space-photo svg {
+  transition: transform 0.35s ease;
+}
+
+.space-card:hover .space-photo svg {
+  transform: scale(1.07);
+}
+
+.req-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(11, 42, 74, 0.1);
+}
+
+/* ---------- Perguntas frequentes ---------- */
+.faq-summary .material-symbols-outlined {
+  transition: transform 0.25s ease;
+}
+
+.faq-item[open] .faq-summary .material-symbols-outlined {
+  transform: rotate(180deg);
+}
+
+.faq-item[open] .faq-content {
+  animation: faq-open 0.3s ease both;
+}
+
+@keyframes faq-open {
+  from { opacity: 0; translate: 0 -6px; }
+  to   { opacity: 1; translate: 0 0; }
+}
+
+/* ---------- Respeitar quem pede menos movimento ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  #features *,
+  #features *::before,
+  #features *::after {
+    animation: none !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0s !important;
+  }
+}
+
+/* ==========================================================================
+   Autores da página (foto da equipe)
+   ========================================================================== */
+
+.team-photo {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  border-bottom: 3px solid var(--q-navy);
+}
+
+.team-photo svg,
+.team-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.team-photo .placeholder-tag {
+  top: 0.5rem;
+  bottom: auto;
+}
+
+.team-person {
+  fill: currentColor;
+  color: var(--q-navy);
+}
+
+.team-person.p2,
+.team-person.p4 {
+  color: var(--q-cyan);
+}
+
+.team-names {
+  list-style: none;
+  max-width: 900px;
+  margin: 0.9rem auto 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Pessoas sobem em sequência quando o bloco aparece */
+.js-anim .team-person {
+  opacity: 0;
+  translate: 0 18px;
+  transition: opacity 0.5s ease, translate 0.5s ease;
+  transition-delay: calc(var(--i, 1) * 90ms), calc(var(--i, 1) * 90ms);
+}
+
+.js-anim .is-visible .team-person {
+  opacity: 1;
+  translate: 0 0;
+}
+
+@media (max-width: 640px) {
+  .team-names {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ==========================================================================
+   Carrossel da galeria
+   ========================================================================== */
+
+.carousel {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.carousel-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+  border: 1px solid var(--q-border);
+  border-radius: var(--q-radius);
+}
+
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-track:focus-visible {
+  outline: 3px solid var(--q-navy);
+  outline-offset: 3px;
+}
+
+.carousel-slide {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+}
+
+.carousel-photo {
+  position: relative;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  aspect-ratio: 16 / 8;
+  background: var(--tone-bg);
+  color: var(--tone-ink);
+}
+
+.carousel-photo svg {
+  height: 58%;
+  width: auto;
+  max-width: 70%;
+}
+
+.carousel-photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-photo .placeholder-tag {
+  top: 0.6rem;
+  bottom: auto;
+}
+
+.carousel-caption {
+  position: absolute;
+  inset: auto 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 2rem 4.5rem 0.9rem 1.25rem;
+  color: #ffffff;
+  background: linear-gradient(to top, rgba(11, 42, 74, 0.88), rgba(11, 42, 74, 0));
+}
+
+.carousel-caption strong {
+  font-size: 1.1rem;
+}
+
+.carousel-caption span {
+  font-size: 0.9rem;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  color: var(--q-navy);
+  background: #ffffff;
+  border: 0;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(11, 42, 74, 0.25);
+  cursor: pointer;
+  translate: 0 -50%;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.carousel-btn[hidden],
+.carousel-dots[hidden] {
+  display: none;
+}
+
+.carousel-prev { left: 0.75rem; }
+.carousel-next { right: 0.75rem; }
+
+.carousel-btn:hover {
+  background: var(--q-cyan);
+  transform: scale(1.08);
+}
+
+.carousel-btn:focus-visible,
+.carousel-dot:focus-visible {
+  outline: 3px solid var(--q-navy);
+  outline-offset: 2px;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-top: 0.9rem;
+}
+
+.carousel-dot {
+  position: relative;
+  width: 0.75rem;
+  height: 0.75rem;
+  padding: 0;
+  background: transparent;
+  border: 2px solid var(--q-navy);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: width 0.25s ease, background-color 0.25s ease;
+}
+
+/* Aumenta a área de toque sem aumentar a bolinha */
+.carousel-dot::after {
+  content: "";
+  position: absolute;
+  inset: -10px -4px;
+}
+
+.carousel-dot[aria-current="true"] {
+  width: 1.75rem;
+  background: var(--q-navy);
+}
+
+/* Texto só para leitores de tela */
+.carousel-status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+@media (max-width: 720px) {
+  .carousel-photo {
+    aspect-ratio: 4 / 3;
+  }
+
+  .carousel-btn {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .carousel-caption {
+    padding-right: 1.25rem;
+  }
+}
+
+/* ==========================================================================
+   Classe utilitária: borda tracejada
+   Uso: <div class="borda-tracejada">...</div>
+   Para mudar cor, espessura ou cantos, defina as variáveis no próprio elemento
+   ou em uma classe, por exemplo: style="--tracejado-cor: var(--q-cyan);"
+   ========================================================================== */
+
+.borda-tracejada {
+  --tracejado-cor: var(--q-navy, #0b2a4a);
+  --tracejado-espessura: 2px;
+  --tracejado-raio: 12px;
+  padding: 1rem 1.25rem;
+  border: var(--tracejado-espessura) dashed var(--tracejado-cor);
+  border-radius: var(--tracejado-raio);
+}
+
+/* Sequência de entrada também para listas com 7 e 8 itens */
+:is(.space-card, .req-item, .process-step-item, .faq-item):nth-child(7) { --i: 6; }
+:is(.space-card, .req-item, .process-step-item, .faq-item):nth-child(8) { --i: 7; }
+:is(.space-card, .req-item, .process-step-item, .faq-item):nth-child(9) { --i: 8; }
+
+/* Foto aérea no lugar do desenho */
+.map-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* As duas quadras de areia acendem juntas ao passar o mouse ou focar */
+.map-stage:has(.map-zone[data-zone="areia"]:is(:hover, :focus-visible)) .map-zone[data-zone="areia"] {
+  background: rgba(255, 255, 255, 0.22);
+  border-color: #ffffff;
+  box-shadow: 0 0 0 2px var(--q-navy);
+}
+
+/* Sobre a foto, a etiqueta e o destaque precisam de mais contraste */
+.map-zone:hover,
+.map-zone.is-active {
+  background: rgba(255, 255, 255, 0.22);
+  border-color: #ffffff;
+  box-shadow: 0 0 0 2px var(--q-navy);
+}
+
+.map-zone-name {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+}
